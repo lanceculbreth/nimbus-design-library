@@ -79,7 +79,7 @@ interface NavSectionProps {
 
 function NavSection({ item, pathname }: NavSectionProps) {
   const isActive = item.children?.some(child => pathname === child.href);
-  const [isOpen, setIsOpen] = useState(isActive || true);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
 
   return (
     <div className="mb-2">
